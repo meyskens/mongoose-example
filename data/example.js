@@ -8,7 +8,7 @@ const PersonSchema = new Schema({
         ref: "Person",
     }],
     personType: { // Should more be needed than a type, just make an object of it!
-        type: String,
+        type: String, // string can only be ONE of the enum types
         enum: ["nice", "funny", "teacher"], // no pun intended
     },
     length: Number, // Number is a very wide defenition!
