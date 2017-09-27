@@ -1,4 +1,4 @@
-const mongoose = requireFromRoot("./mongodb")
+const mongoose = require("./mongodb")
 const Schema = mongoose.Schema
 
 const PersonSchema = new Schema({
