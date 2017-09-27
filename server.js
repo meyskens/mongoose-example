@@ -3,11 +3,11 @@ const app = express()
 
 const people = require("./data/example")
 
-app.listen()
+app.listen(3000)
 
 app.get("/", async (req, res) => { // async needs to be set before the function to use await inside it
     // this function awaits the Promise of Mongose with the result and sends the value in JSON
-    res.json(await people.getPersonByName("maartje"))
+    res.json(await people.getPersonByName("Maartje Eyskens"))
 })
 
 app.get("/create", async (req, res) => {

@@ -1,5 +1,5 @@
-const mongoose = require("./mongodb")
-const Schema = mongoose.Schema
+const db = require("./mongodb")
+const Schema = require("mongoose").Schema
 
 const PersonSchema = new Schema({
     name: String, // Short notation
@@ -23,14 +23,14 @@ const PersonSchema = new Schema({
         }
         // More can be here!
     }
-}, { collection: "people" }) // Mongoose likes to name things as it likes, better to override that
+}, { collection: "people" }) // db likes to name things as it likes, better to override that
 
 // This allows to set indexes on fields, for fast searching!
 PersonSchema.index({
     username: 1,
 });
 
-const PersonModel = mongoose.model("people", PersonSchema, "people")
+const PersonModel = db.model("people", PersonSchema, "people")
 
 module.exports.getPersonByName = (name) => { 
     return PersonModel.findOne({ name }) // in ES6 you can drop the value if the key had the same name! so in full this wll be { name: name }
