@@ -19,6 +19,6 @@
   "homepage": "https://github.com/meyskens/mongoose-example#readme",
   "dependencies": {
     "express": "^4.15.5",
-    "mongoose": "^4.11.13"
+    "mongoose": "^5.7.5"
   }
 }
